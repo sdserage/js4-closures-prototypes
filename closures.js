@@ -200,11 +200,14 @@ var makeCounter = () =>{
     // outside our lexical scope
     return {
       // Code here.
+      publicMethod(){
+        return privateMethod();
+      }
     };
 
   })();
 
-
+  module.publicMethod();
 
   /******************************************************************************\
    #PROBLEM-07
