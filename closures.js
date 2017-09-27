@@ -222,6 +222,14 @@ var makeCounter = () =>{
 
     return {
       // Code here
+      addToSecret(num){
+        secret += num;
+        return secret;
+      },
+      takeAwayFromSecret(num){
+        secret -= num;
+        return secret;
+      }
     }
   }
 
