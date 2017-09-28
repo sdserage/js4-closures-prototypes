@@ -51,7 +51,18 @@ var bob = Employee('Bob','bob@gmail.com','01-02-98');
 
 // Code here
 
-
+class Car{
+  constructor(model, make, year){
+    this.model = model;
+    this.make = make;
+    this.year = year;
+    this.move = 0;
+  }
+  moveCar(){
+    this.move += 10;
+    return this.move;
+  }
+}
 
 
   //Function Invocations Here
