@@ -255,18 +255,20 @@ var makeCounter = () =>{
    Fix the code below to log the desired output.
    */
 
-   function timeOutCounter() {
-     function countStorage(){
-       num = 0;
-       return function(){
-         return num++;
-       }
-     }
-     let count = countStorage();
-     for (var i = 0; i <= 5; i++) {
-       setTimeout(function() {
-           console.log(count());
-       }, i * 1000)
-     }
-   }
-   timeOutCounter();
+
+  function timeOutCounter() {
+    function countStorage(i){
+      var num = i;
+      return function(){
+        console.log(num);
+      }
+    }
+    for (var i = 0; i <= 5; i++) {
+      let currentI = countStorage(i);
+      setTimeout(function() {
+          currentI();
+      }, i * 1000)
+    }
+  }
+
+  timeOutCounter();
