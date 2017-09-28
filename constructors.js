@@ -24,14 +24,19 @@ function CarFactory(make, model){
 
 
 function Employee(name, email, hireDate) {
-    this.name = name;
-    this.email = email;
-    this.hireDate = hireDate;
+    // this.name = name;
+    // this.email = email;
+    // this.hireDate = hireDate;
+    return {
+      name,
+      email,
+      hireDate
+    }
 }
 
 // Code here
 
-
+var bob = Employee('Bob','bob@gmail.com','01-02-98');
 
 
 
